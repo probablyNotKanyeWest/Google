@@ -3,8 +3,9 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  color: black;
   text-decoration: none;
-  background: var(--page);
+  background: #ffffff;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -50,13 +51,13 @@ body {
 
 .main-search {
   width: 50vw;
-  height: 5vh;
+  height: 2vh;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
-  background: var(--background-secondary);
-  -webkit-backdrop-filter: var(--background-filter);
-  backdrop-filter: var(--background-filter);
+  border-radius: 100000px;
+  background-color: #ffffff;
+  border: 2px solid #b2b2b2;
+  color: black
 }
 
 .fixed-nav-bar-container {
@@ -143,42 +144,22 @@ body {
   font-size: 22px;
   left: 0;
   right: 0;
-  min-height: 10vh;
-  padding: 0 25px;
   box-sizing: border-box;
-  background-color: var(--background);
-  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: var(--background-filter);
-  backdrop-filter: var(--background-filter);
   transition: 0.35s ease;
   border-radius: 15px;
   width: fill;
   margin: 15px;
   z-index: 100;
   position: fixed;
+  height: 20px;
 }
 
-.fixed-nav-bar .icon:hover {
-  transform: translateY(-55%) scale(1.03);
-  font-weight: 800;
+a > i{
+  display: none !important;
 }
 
 .fixed-nav-bar .icon {
-  position: absolute;
-  float: left;
-  text-transform: uppercase;
-  font-size: 30px;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-  color: var(--text-primary);
-  font-weight: 600;
-  margin-left: 5px;
-  font-style: normal;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  height: 0.5vh;
-  width: 0.5vh;
-  top: 18%;
+  display: none !important;
 }
 
 .fixed-nav-bar-right {
@@ -187,7 +168,7 @@ body {
   transform: translateY(-50%);
   text-transform: uppercase;
   font-size: 18px;
-  color: var(--text-primary);
+  color: black;
   font-weight: 600;
   right: 2%;
 }
@@ -195,10 +176,10 @@ body {
 .fixed-nav-bar-right .navbar-link {
   margin-left: 10px;
   text-transform: uppercase;
-  font-size: 2.5vh;
+  font-size: 1.2vh;
   cursor: pointer;
-  color: var(--text-primary);
-  font-weight: 800;
+  color: black;
+  font-weight: 200;
   right: 2%;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -232,27 +213,14 @@ body {
   }
 }
 
-.fixed-nav-bar-right .navbar-link:hover {
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 800;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-size: 3vh;
-  transform: translateX(-20%);
-}
-
 .navbar-icon {
   margin-right: 5px;
   transition: all 0.2s ease;
+  display: none;
 }
 
 .weird-icon {
-  line-height: 150px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  display: none !important;
 }
 
 .navbar-link {
@@ -268,19 +236,6 @@ body {
     'opsz' 48;
 }
 
-.navbar-link:hover > .settings-icon {
-  animation: spin 0.5s;
-  animation-timing-function: cubic-bezier(0, 1.04, 0.91, 0.99);
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 img {
   width: 6vh;
   padding-top: 5px;
@@ -392,6 +347,7 @@ select {
   margin-top: 30vh;
   margin-bottom: 5vh;
   text-shadow: 2px 4px 6px rgb(0, 0, 0, 0.2);
+  width: 300px;
 }
 
 @media (orientation: portrait) {
