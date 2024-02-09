@@ -1,6 +1,33 @@
 <!doctype html>
 <html lang="en">
   <head>
+        <script>
+        // Function to check if a cookie with a specific name exists
+function getCookie(name) {
+    // Split cookies by semicolon into an array
+    var cookies = document.cookie.split(';');
+    
+    // Iterate through each cookie
+    for (var i = 0; i < cookies.length; i++) {
+        // Trim leading and trailing whitespace
+        var cookie = cookies[i].trim();
+        
+        // Check if the cookie starts with the specified name
+        if (cookie.startsWith(name + '=')) {
+            // Return the cookie value
+            return cookie.substring(name.length + 1);
+        }
+    }
+    // If the cookie isn't found, return null
+    return null;
+}
+
+// Check if the "fart" cookie is not present
+if (getCookie("fart") === null) {
+    // Redirect to ./login.html
+    window.location.href = "./login.html";
+}
+    </script>
     <meta charset="UTF-8" />
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
